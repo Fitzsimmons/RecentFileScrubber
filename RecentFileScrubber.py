@@ -76,7 +76,7 @@ class RecentFileScrubber(pyinotify.ProcessEvent):
 			query += 'contains(@href, "%s")' % (p,)
 		query += ' and not(private)]'
 		if self.action == "hide":
-			query += "/info/metadatag"
+			query += "/info/metadata"
 		
 		self.xpath_query = query
 		if self.debug:
